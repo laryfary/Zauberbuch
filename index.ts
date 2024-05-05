@@ -11,3 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
         return 'Versuchs nochmal!';
       }
     };
+     const displayRandomSpell = async (): Promise<void> => {
+      const randomSpell = await fetchRandomSpell();
+      const spellDisplay = document.getElementById('spell-display');
+      if (spellDisplay) {
+        spellDisplay.textContent = randomSpell;
+      }
+    };
+  
+    const fetchButton = document.getElementById('fetch-button');
+    if (fetchButton) {
+      fetchButton.addEventListener('click', displayRandomSpell);
+    }
