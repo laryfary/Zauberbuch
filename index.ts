@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Use the event object if needed
-
     const fetchRandomSpell = async (): Promise<string> => {
       try {
         const res = await fetch('https://potterapi-fedeperin.vercel.app/en/spells/random');
@@ -18,8 +16,22 @@ document.addEventListener("DOMContentLoaded", () => {
         spellDisplay.textContent = randomSpell;
       }
     };
-  
-    const fetchButton = document.getElementById('fetch-button');
+   const fetchButton = document.getElementById('fetch-button');
     if (fetchButton) {
       fetchButton.addEventListener('click', displayRandomSpell);
     }
+  const vogel = document.querySelector('.vogel');
+    let position = -100;
+    const fliegen = (): void => {
+      position += 5; // Increase the position by 5 pixels per update
+      if (vogel) {
+      }
+      if (position > window.innerWidth) {
+        position = -100;
+      }
+      requestAnimationFrame(fliegen);
+    };
+    if (vogel) {
+      fliegen();
+    }
+  });
