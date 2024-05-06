@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const vogel = document.querySelector('.vogel');
     let position = -100;
     const fliegen = (): void => {
-      position += 5; // Increase the position by 5 pixels per update
+      position += 5; 
       if (vogel) {
       }
       if (position > window.innerWidth) {
