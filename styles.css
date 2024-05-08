@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-image: url('../../wallpaper-harry.jpeg');
+    background-image: url('../../wallpaper-harry.jpeg'); /*Hintergrundbild und Platzierung*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -12,24 +12,25 @@ body {
     height: 100vh;
   }
   
-  .container {
+  .container {  /*Container für Text Zauberbuch*/
     padding: 20px;
-    max-width: 800px; /* Breite des Containers erhöhen */
+    max-width: 800px; 
     border-radius: 10px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  
-  h1 {
+
+  h1 {   /*Überschrift Zauberbuch*/
     color: #fff;
     margin-bottom: 20px;
-  }
-  h2 {
+  } 
+  h2 {  /*Überschrift 2 Zauberbuch*/
     color: #fff;
     margin-bottom: 15px;
   }
-  #fetch-button {
-    padding: 20px 35px; /* GrÃ¶ÃŸere Polsterung fÃ¼r den Button */
+  
+  #fetch-button { /*Button um Zauberbruch abzurufen*/
+    padding: 20px 35px; 
     font-size: 1.2em;
     background-color: #990000;
     border: none;
@@ -44,55 +45,56 @@ body {
   }
   
   #spell-display {
-    font-size: 3em; /* GrÃ¶ÃŸere Schrift fÃ¼r die Zauberanzeige */
+    font-size: 3em; /* Größere Schrift für die Zauberanzeige */
     font-weight: bold; /* Fett geschriebener Text */
-    padding: 30px; /* GrÃ¶ÃŸere Polsterung fÃ¼r die Zauberanzeige */
+    padding: 30px; /* Größere Polsterung für die Zauberanzeige */
     border-radius: 5px;
-    color: #f7f5ef; /* Andere Farbe fÃ¼r die Zauberanzeige */
+    color: #f7f5ef; /* Farbe für die Zauberanzeige */
   }
   
   #spell-display::first-letter {
-    font-size: 2.5em; /* GrÃ¶ÃŸere Schrift fÃ¼r den ersten Buchstaben */
-    color: #cc0000; /* Farbe des ersten Buchstabens Ã¤ndern */
+    font-size: 2.5em; /* Größere Schrift für den ersten Buchstaben */
+    color: #cc0000; /* Farbe des ersten Buchstabens ändern */
   }
   @keyframes vogel-flug {
     0% {
-      left: -100px; /* Startpunkt auÃŸerhalb des Bildes links */
-      top: 50%; /* Vertikale Mitte des Bildschirms */
+      left: -100px; /* Startpunkt außerhalb des Bildes links */
+      top: 50%; /* Mitte des Bildschirms */
     }
     50% {
-      left: calc(100% + 100px); /* Endpunkt auÃŸerhalb des Bildes rechts */
-      top: 50%; /* Vertikale Mitte des Bildschirms */
+      left: calc(100% + 100px); /* Endpunkt außerhalb des Bildes rechts */
+      top: 50%; /* Mitte des Bildschirms */
     }
     51%, 100% {
-      left: calc(100% + 100px); /* Bleibt auÃŸerhalb des Bildes rechts */
-      top: 50%; /* Vertikale Mitte des Bildschirms */
+      left: calc(100% + 100px); /* Bleibt außerhalb des Bildes rechts */
+      top: 50%; /* Mitte des Bildschirms */
     }
   }
   
   @keyframes vogel-pause {
     0%, 50% {
-      left: calc(-100% - 100px); /* Startpunkt auÃŸerhalb des Bildes links */
-      top: 50%; /* Vertikale Mitte des Bildschirms */
+      left: calc(-100% - 100px); /* Startpunkt außerhalb des Bildes links */
+      top: 50%; /* Mitte des Bildschirms */
     }
     51% {
-      left: calc(-100% - 100px); /* Bleibt auÃŸerhalb des Bildes links */
-      top: 50%; /* Vertikale Mitte des Bildschirms */
+      left: calc(-100% - 100px); /* Bleibt außerhalb des Bildes links */
+      top: 50%; /* Mitte des Bildschirms */
     }
     100% {
-      left: -100px; /* Startpunkt auÃŸerhalb des Bildes links */
-      top: 50%; /* Vertikale Mitte des Bildschirms */
+      left: -100px; /* Startpunkt außerhalb des Bildes links */
+      top: 50%; /* Mitte des Bildschirms */
     }
   }
   .vogel {
     position: absolute;
-    top: 50%; /* Vertikale Mitte des Bildschirms */
+    top: 50%; /* Mitte des Bildschirms */
     width: 250px; /* Breite des Vogels */
-    height: auto; /* Automatische HÃ¶he entsprechend der Breite */
-    animation: vogel-flug 10s infinite; /* Animation fÃ¼r den Flug */
+    height: auto; /* Automatische Höhe entsprechend der Breite */
+    animation: vogel-flug 10s infinite; /* Animation für den Flug */
     user-select: none;
   }
   
   .vogel.pausieren {
-    animation: vogel-pause 30s infinite; /* Animation fÃ¼r die Pause */
+    animation: vogel-pause 30s infinite; /* Animation für die Pause */
   }  
+  
